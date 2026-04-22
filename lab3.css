@@ -43,7 +43,8 @@ footer {
 
 /* wider-gamut color() */
 #attendance {
-  background-color: color(srgb 0.9 0.95 1);
+  background-color: #e6f0ff; /* fallback */
+  background-color: color(display-p3 0.9 0.95 1);
 }
 
 /* color-mix() */
@@ -150,11 +151,10 @@ fieldset:has(input[type=radio]:checked) {
 }
 
 /* Nested Selector */
-#form {
-  & fieldset {
-    padding: 10px;
-  }
+#form fieldset {
+  padding: 10px;
 }
+
 
 /* Text */
 footer h2 {
