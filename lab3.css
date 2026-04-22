@@ -1,0 +1,242 @@
+/* CSS Variable with fallback */
+:root {
+  --main-color: #2c5f8a;
+}
+
+/* Universal Selector */
+* {
+  box-sizing: border-box;
+}
+
+/* Element Selector */
+body {
+  background-color: var(--main-color, #2c5f8a); 
+  font-family: 'Lora', serif; /* 3rd party font */
+  margin: 0;
+  padding: 0;
+}
+
+/* rgb */
+p {
+  color: rgb(50, 50, 50);
+}
+
+/* hex */
+h1 {
+  color: #ffffff;
+}
+
+/* hsl */
+h2 {
+  color: hsl(210, 50%, 30%);
+}
+
+/* color name */
+footer {
+  background-color: royalblue;
+}
+
+/* rgba */
+.card {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* wider-gamut color() */
+#attendance {
+  background-color: color(srgb 0.9 0.95 1);
+}
+
+/* color-mix() */
+#agenda {
+  background-color: color-mix(in srgb, blue 10%, white);
+}
+
+/* background-color */
+header {
+  background-color: #1a1a2e;
+
+  /* Margin — longhand */
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+
+  /* Padding — longhand */
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+
+  /* Border — longhand */
+  border-style: solid;
+  border-color: #333333;
+  border-width: 2px;
+  border-radius: 0px;
+}
+
+/* Margin — shorthand + auto */
+main {
+  margin: 20px auto;
+  max-width: 800px;   
+  padding: 2%;       
+}
+
+/* Border — shorthand */
+details {
+  border: 1px dashed gray;
+  padding: 10px;
+}
+
+/* Class Selector */
+.card {
+  padding: 15px;      /* sizing: padding */
+}
+
+/* ID Selector */
+#form {
+  width: 100%;        
+  min-width: 200px;  
+}
+
+/* Attribute Selector */
+input[type=text] {
+  border: 1px solid gray;
+  padding: 4px;
+}
+
+/* Pseudo-class: hover */
+nav a:hover {
+  color: yellow;
+}
+
+/* Pseudo-class: active */
+button:active {
+  background-color: darkblue;
+}
+
+/* Selector List */
+h1, h2, h3 {
+  font-family: 'Lora', serif;
+}
+
+/* Descendant Combinator */
+header p {
+  font-size: 0.9rem;  /* relative unit: rem */
+}
+
+/* Child Combinator */
+header > nav {
+  margin-top: 10px;
+}
+
+/* General Sibling Combinator */
+section ~ section {
+  margin-top: 10px;
+}
+
+/* Adjacent Sibling Combinator */
+h2 + p {
+  margin-top: 0;
+}
+
+/* Combining Two Selectors */
+section.card {
+  border: 1px solid #ccc;
+}
+
+/* :has() */
+fieldset:has(input[type=radio]:checked) {
+  border-color: orange;
+}
+
+/* Nested Selector */
+#form {
+  & fieldset {
+    padding: 10px;
+  }
+}
+
+/* Text */
+footer h2 {
+  color: white;
+  text-decoration: underline;
+  text-align: center;
+}
+
+/* Display: inline-block */
+nav a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 0.9em;   /* relative unit: em */
+}
+
+/* Display: block */
+hr {
+  display: block;
+}
+
+/* Sizing: height and width */
+img {
+  height: auto;
+  width: 300px;
+  border: 2px solid orange;   /* absolute unit: px */
+}
+
+/* Position: relative */
+#attendance {
+  position: relative;
+}
+
+/* Position: fixed */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2c5f8a;
+  color: white;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+/* Flexbox */
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Grid */
+#media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+#media h2 {
+  grid-column: 1 / -1;
+}
+
+/* Absolute unit: pt */
+legend {
+  font-size: 12pt;
+}
+
+/* Absolute unit: cm */
+audio {
+  margin-top: 0.5cm;
+}
+
+/* Media Query */
+@media (max-width: 600px) {
+  .flex-grid {
+    flex-direction: column;
+  }
+  #media {
+    grid-template-columns: 1fr;
+  }
+}

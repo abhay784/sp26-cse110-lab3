@@ -4,11 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="Meeting minutes for team project">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>First Meeting for CSE110</title>
   <link rel="icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap">
+
+  <link rel="stylesheet" href="lab3.css">
+
+  <style>
+    .hidden-note {
+      display: none;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+    }
+
+    video {
+      margin-top: 5mm;
+    }
+  </style>
+
 </head>
 
 <body>
+
+<a id="back-to-top" href="#">Top</a>
 
 <header>
   <h1>Group Meeting Information</h1>
@@ -20,84 +43,90 @@
 
 <main>
 
-  <section>
-    <h2>Meeting Topic: Brainstorming</h2>
-    <p>This meeting focused on <em>getting our group work done</em> for our CSE110 class.</p>
-  </section>
+  <div class="flex-grid">
 
-  <section id="attendance">
-    <h2>Attendance</h2>
-    <ul>
-      <li><strong>Abhay</strong></li>
-      <li><strong>Anand</strong></li>
-      <li><strong>Tybalt</strong></li>
-    </ul>
-  </section>
+    <section class="card">
+      <h2>Meeting Topic: Brainstorming</h2>
+      <p>This meeting focused on <em>getting our group work done</em> for our CSE110 class.</p>
+      <span class="hidden-note">This is hidden</span>
+    </section>
 
-  <section id="agenda">
-    <h2>Agenda</h2>
-    <ol>
-      <li>Group Bonding</li>
-      <li>Make a logo</li>
-      <li>Assign roles</li>
-    </ol>
-  </section>
+    <section id="attendance" class="card">
+      <h2>Attendance</h2>
+      <ul>
+        <li><strong>Abhay</strong></li>
+        <li><strong>Anand</strong></li>
+        <li><strong>Tybalt</strong></li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Unfinished Business</h2>
-    <p>Finish up the slot machine assignment.</p>
-  </section>
+    <section id="agenda" class="card">
+      <h2>Agenda</h2>
+      <ol>
+        <li>Group Bonding</li>
+        <li>Make a logo</li>
+        <li>Assign roles</li>
+      </ol>
+    </section>
 
-  <section>
-    <h2>New Business</h2>
-    <ul>
-      <li>Work on the revisions</li>
-    </ul>
-  </section>
+    <section class="card">
+      <h2>Unfinished Business</h2>
+      <p>Finish up the slot machine assignment.</p>
+    </section>
 
-  <section>
-    <h2>Miscellaneous</h2>
-    <hr>
-    <p>
-      <b>Note:</b> Our logo is a strange looking AI generated wizard<br>
-      <i>He's mad chill</i>
-    </p>
-  </section>
+    <section class="card">
+      <h2>New Business</h2>
+      <ul>
+        <li>Work on the revisions</li>
+      </ul>
+    </section>
 
-  <section>
+    <section class="card">
+      <h2>Miscellaneous</h2>
+      <hr>
+      <!-- Inline CSS — one example -->
+      <p style="font-style: italic; color: brown;">
+        <b>Note:</b> Our logo is a strange looking AI generated wizard<br>
+        He's mad chill
+      </p>
+    </section>
+
+  </div>
+
+  <section class="card">
     <h2>Whiteboard Diagram</h2>
     <img src="screenshots/sticker3266806270228106958.png"
          alt="A cat from our meeting"
          width="300">
   </section>
 
-  <section id="media">
+  <section id="media" class="card">
     <h2>Meeting Recordings</h2>
 
-    <h3>Audio Recording</h3>
-    <audio controls>
-      <source src="goo-goo-gagaaa.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
+    <div>
+      <h3>Audio Recording</h3>
+      <audio controls>
+        <source src="goo-goo-gagaaa.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
 
-    <h3>Video Recording</h3>
-    <video width="320" height="240" controls>
-      <source src="messi.mp4" type="video/mp4">
-    </video>
+    <div>
+      <h3>Video Recording</h3>
+      <video width="320" height="240" controls>
+        <source src="messi.mp4" type="video/mp4">
+      </video>
+    </div>
 
   </section>
 
-  <section>
+  <section class="card">
     <h2>Additional Notes</h2>
     <details>
       <summary>Click to expand notes</summary>
       <p>None of us have Claude Code. Give us Claude Code.</p>
     </details>
   </section>
-
-  <div>
-    <p>Random divider</p>
-  </div>
 
 </main>
 
@@ -136,14 +165,11 @@
 
       <label>Favorite tool:</label><br>
       <input list="tools">
-
       <datalist id="tools">
         <option value="Slack">
         <option value="Zoom">
         <option value="GitHub">
-      </datalist>
-
-      <br><br>
+      </datalist><br><br>
 
       <button type="submit">Submit</button>
 
@@ -153,5 +179,4 @@
 </footer>
 
 </body>
-
 </html>
